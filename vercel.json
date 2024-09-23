@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "projects": {
+      "frontend": {
+        "src": "client/package.json",
+        "use": "@vercel/next"
+      },
+      "backend": {
+        "src": "server",
+        "use": "@vercel/node"
+      }
+    },
+    "rewrites": [
+      { "source": "/api/(.*)", "destination": "/backend/api/$1" }
+    ]
+  }
+  
